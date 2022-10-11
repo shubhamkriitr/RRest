@@ -51,7 +51,7 @@ up.paths.slash_direction = filesep;     % usually a backslash for Windows, forwa
 % "up.paths.root_folder = 'C:\Documents\Data\';", then data will be saved
 % in the directory located at 'C:\Documents\Data\DATASETNAME\', where
 % "DATASETNAME" is the name of the dataset being analysed, e.g. "vortal_rest".
-up.paths.root_folder = 'C:\Documents\Data\';
+up.paths.root_folder = 'C:\Users\shubham\Downloads\Datasets\mini\';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% LOAD PREVIOUS UNIVERSAL PARAMETERS %%%%%%%%
@@ -93,8 +93,8 @@ up.al.key_components = {'extract_resp_sig', 'estimate_rr', 'fuse_rr'};      % To
 up.al.options.extract_resp_sig = {'ppg_feat', 'ppg_filt', 'ekg_feat', 'ekg_filt'};  % Possible methods: 'ppg_feat', 'ekg_feat', 'ppg_filt', 'ekg_filt'
 % ------------------------------------------------------
 % Specify the components for feature-based extraction of respiratory signals:
-up.al.sub_components.ppg_feat = {'EHF', 'PDt', 'FPt', 'FMe', 'RS', 'ELF'};  % Should read: {'EHF', 'PDt', 'FPt', 'FMe', 'RS', 'ELF'}
-up.al.sub_components.ekg_feat = {'EHF', 'RDt', 'FPt', 'FMe', 'RS', 'ELF'};  % Should read: {'EHF', 'RDt', 'FPt', 'FMe', 'RS', 'ELF'}
+up.al.sub_components.ppg_feat = {'EHF', 'PDt', 'FMe', 'RS', 'ELF'};  % Should read: {'EHF', 'PDt', 'FPt', 'FMe', 'RS', 'ELF'}
+up.al.sub_components.ekg_feat = {'EHF', 'FMe', 'RS', 'ELF'};  % Should read: {'EHF', 'RDt', 'FPt', 'FMe', 'RS', 'ELF'}
 % Specify the interchangeable technique(s) to be used for each component of feature-based extraction of respiratory signals:
 up.al.options.PDt = {'IMS'};                                                % Possible methods: 'DCl', 'COr', 'IMS'
 up.al.options.RDt = {'GC'};                                                 % Possible methods: 'GC', 'ME'
@@ -105,9 +105,9 @@ up.al.options.RS = {'linB'};                                                % Po
 up.al.options.ekg_filt = {'Wfm', 'Wam', 'BFi'};                             % Possible methods: 'Wfm', 'Wam', 'CCF', 'BFi'
 up.al.options.ppg_filt = {'Wfm', 'Wam', 'BFi'};                             % Possible methods: 'Wfm', 'Wam', 'CCF', 'BFi'
 % Specify the interchangeable technique(s) for RR Estimation
-up.al.options.estimate_rr = {'FTS', 'ARS', 'ARM', 'ACF', 'WCH', 'PKS', 'ZeX', 'PZX', 'CtO', 'CtA'};       % Possible methods: 'FTS', 'ARS', 'ARM', 'ARP', 'ARPz', 'ACF', 'WCH', 'PKS', 'ZeX', 'PZX', 'CtO', 'CtA'
+up.al.options.estimate_rr = {'FTS', 'ARS'};       % Possible methods: 'FTS', 'ARS', 'ARM', 'ARP', 'ARPz', 'ACF', 'WCH', 'PKS', 'ZeX', 'PZX', 'CtO', 'CtA'
 % Different methods for fusion of RR estimates:
-up.al.options.fuse_rr = {'fus_mod', 'fus_temp'};                            % Possible methods: 'fus_mod', 'fus_temp'
+up.al.options.fuse_rr = {'fus_mod'};                            % Possible methods: 'fus_mod', 'fus_temp'
 % Components for each method of extraction of RR fusion:
 up.al.sub_components.fus_mod = {'SFu', 'SPA'};                              % Possible methods: 'SFu', 'PMC', 'PRC', 'SPA'
 up.al.sub_components.fus_temp = {'TFu'};                                    % Possible methods: 'TFu'

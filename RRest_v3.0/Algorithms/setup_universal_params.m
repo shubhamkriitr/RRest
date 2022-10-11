@@ -90,7 +90,7 @@ fprintf('\n--- Creating Universal Parameters ');
 % Specify the stages of the algorithms (best left alone):
 up.al.key_components = {'extract_resp_sig', 'estimate_rr', 'fuse_rr'};      % To run the analysis in full this should be: {'extract_resp_sig', 'estimate_rr', 'fuse_rr'}
 % Specify methods for extraction of respiratory signals (feature / filter, ecg / ppg):
-up.al.options.extract_resp_sig = {'ppg_feat', 'ppg_filt', 'ekg_feat', 'ekg_filt'};  % Possible methods: 'ppg_feat', 'ekg_feat', 'ppg_filt', 'ekg_filt'
+up.al.options.extract_resp_sig = {'ppg_feat', 'ppg_filt', 'ekg_feat'};  % Possible methods: 'ppg_feat', 'ekg_feat', 'ppg_filt', 'ekg_filt'
 % ------------------------------------------------------
 % Specify the components for feature-based extraction of respiratory signals:
 up.al.sub_components.ppg_feat = {'EHF', 'PDt', 'FMe', 'RS', 'ELF'};  % Should read: {'EHF', 'PDt', 'FPt', 'FMe', 'RS', 'ELF'}
@@ -105,7 +105,7 @@ up.al.options.RS = {'linB'};                                                % Po
 up.al.options.ekg_filt = {'Wfm', 'Wam', 'BFi'};                             % Possible methods: 'Wfm', 'Wam', 'CCF', 'BFi'
 up.al.options.ppg_filt = {'Wfm', 'Wam', 'BFi'};                             % Possible methods: 'Wfm', 'Wam', 'CCF', 'BFi'
 % Specify the interchangeable technique(s) for RR Estimation
-up.al.options.estimate_rr = {'FTS', 'ARS'};       % Possible methods: 'FTS', 'ARS', 'ARM', 'ARP', 'ARPz', 'ACF', 'WCH', 'PKS', 'ZeX', 'PZX', 'CtO', 'CtA'
+up.al.options.estimate_rr = {'FTS'};       % Possible methods: 'FTS', 'ARS', 'ARM', 'ARP', 'ARPz', 'ACF', 'WCH', 'PKS', 'ZeX', 'PZX', 'CtO', 'CtA'
 % Different methods for fusion of RR estimates:
 up.al.options.fuse_rr = {'fus_mod'};                            % Possible methods: 'fus_mod', 'fus_temp'
 % Components for each method of extraction of RR fusion:
